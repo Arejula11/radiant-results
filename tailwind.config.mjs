@@ -6,9 +6,10 @@ export default {
 		extend: {
 			colors: {
 				current: "currentColor",
+				redRR: "#FF4655",
 				primary:{
 					grey: "rgb(var(--color-primary-grey)) / <alpha-value>",
-					redRR: "#FF4655",
+					
 				},
 				text: {
 					body: "rgb(var(--color-text-body)) / <alpha-value>",
