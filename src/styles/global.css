@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* light */
+    .theme-RR {
+        --color-primary-grey: #CBC;
+        --color-text-body: #000;
+        --color-text-bold: #000;
+        --color-bg-body: #E4E4E4;
+       
+    }
+    /* dark */
+    .theme-RR.dark {
+        --color-primary-grey: #8B8B8B;
+        --color-text-body: #fff;
+        --color-text-bold: #fff;
+        --color-bg-body: #373636;
+    }
+    :root {
+       
+        background-color: theme('colors.bg.body');
+        color: theme('colors.text.body');
+        
+        scroll-behavior: smooth;
+    }
+
+   
+}
+
