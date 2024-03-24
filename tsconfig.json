@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "/home/arejula11/Documentos/Proyectos/radiant-results",
     "paths": {
       "@components/*": [
         "src/components/*"
@@ -17,8 +17,9 @@
       ],
       "@/*": [
         "src/*"
-      ],
+      ]
     },
-    
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }

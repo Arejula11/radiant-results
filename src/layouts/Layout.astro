@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html class="darkRR" lang="en">
+<html class="theme-darkRR" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -18,7 +18,9 @@ const { title } = Astro.props;
 		<script is:inline>
 			const theme = (() => {
 			  if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+				console.log(localStorage.getItem("theme") + " from local storage ");
 				return localStorage.getItem("theme");
+				
 				
 			  }
 			  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -35,10 +37,12 @@ const { title } = Astro.props;
 			  document.documentElement.classList.add("dark");
 			}
 			window.localStorage.setItem("theme", theme);
-		  </script>
+		</script>
+		
 		
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
+
